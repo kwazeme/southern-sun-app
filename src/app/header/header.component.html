@@ -7,17 +7,27 @@
     <span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page">Sun Hotels</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" aria-current="page" routerLink="/hotels">Sun Hotels</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link">Resorts</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/resorts">Resorts</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link">Garden Court</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/garden-courts">Garden Court</a>
         </li>
       </ul>
     </div>
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Manage
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" >Login</a></li>
+      <li><a class="dropdown-item" >Register</a></li>
+      <li><a class="dropdown-item" >Admin</a></li>
+    </ul>
+  </div>
 
   </div>
 </div>
