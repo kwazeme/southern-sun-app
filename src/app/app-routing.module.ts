@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GardenCourtComponent } from './garden-court/garden-court.component';
+import { HotelBookingComponent } from './hotels/hotel-booking/hotel-booking.component';
 import { HotelDetailComponent } from './hotels/hotel-detail/hotel-detail.component';
 import { HotelEditComponent } from './hotels/hotel-edit/hotel-edit.component';
 import { HotelsComponent } from './hotels/hotels.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'hotels', component: HotelsComponent,
   children: [
     {path: 'new', component: HotelEditComponent},
-    {path: ':id/edit', component: HotelDetailComponent},
+    {path: 'edit/:id', component: HotelDetailComponent},
+    {path: 'booking/:id', component: HotelBookingComponent, outlet: 'hotelBookingModal'},
 
   ]}, //hotel children routes
 

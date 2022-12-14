@@ -15,6 +15,7 @@ import { HotelEditComponent } from './hotels/hotel-edit/hotel-edit.component';
 import { HotelsService } from './hotels/hotels.service';
 import { HotelDetailComponent } from './hotels/hotel-detail/hotel-detail.component';
 import { HotelsFilterPipe } from './hotels/hotels-filter.pipe';
+import { HotelBookingComponent } from './hotels/hotel-booking/hotel-booking.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { HotelsFilterPipe } from './hotels/hotels-filter.pipe';
     HotelEditComponent,
     HotelDetailComponent,
     HotelsFilterPipe,
+    HotelBookingComponent,
   ],
   imports: [
     BrowserModule,

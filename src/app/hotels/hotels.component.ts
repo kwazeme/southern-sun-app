@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Hotel } from './hotels.model';
 import { HotelsService } from './hotels.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'sun-hotels',
@@ -14,7 +15,8 @@ export class HotelsComponent implements OnInit, OnDestroy {
 
   term: string;
 
-  constructor(public hotelsService: HotelsService) { }
+  constructor(public hotelsService: HotelsService,
+            private router: Router) { }
 
   ngOnInit(): void {
     this.hotelsService.getHotels();
