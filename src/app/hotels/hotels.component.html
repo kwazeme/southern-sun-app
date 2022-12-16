@@ -38,7 +38,7 @@
       data-bs-toggle="modal"
       data-bs-target="#hotelBookingModal"
       style="text-align: center; cursor: pointer;"
-      routerLink="{ outlets: { hotelBookingModal: ['booking/{{ hotel.id }}'] } }">
+      [routerLink]="[{ outlets: { hotelBookingModal: 'booking/{{ hotel.id }}'}}]">
         BOOK NOW
       </div>
     </div>
@@ -50,8 +50,8 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="hotelBookingModal" tabindex="-1" aria-labelledby="hotelBookingModal" aria-hidden="true">
-    <div class="modal-dialog">
+  <div class="modal fade" data-bs-backdrop="static" id="hotelBookingModal" tabindex="-1" aria-labelledby="hotelBookingModal" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-100p">
       <div class="modal-content">
         <router-outlet name="hotelBookingModal"></router-outlet>
       </div>

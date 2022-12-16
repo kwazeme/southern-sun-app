@@ -9,6 +9,7 @@ import { ResortsComponent } from './resorts/resorts.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/hotels', pathMatch: 'full'}, //default route
+  // {path: 'booking/:id', component: HotelBookingComponent, outlet: 'hotelBookingModal'},
   {path: 'hotels', component: HotelsComponent,
   children: [
     {path: 'new', component: HotelEditComponent},

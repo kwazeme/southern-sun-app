@@ -11,6 +11,7 @@ import { Hotel } from "./hotels.model";
 })
 export class HotelsService {
   private hotelChangedEvent = new Subject<Hotel[]>();
+  hotelSelectedEvent = new Subject<Hotel>();
 
   private hotels: Hotel[] = [];
   hotelCardsClone: Hotel[];
