@@ -3,7 +3,7 @@
     <h1 class="modal-title fs-5" id="hotelBookingModal">Book Your Chosen Hotel Here</h1>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
-  <div class="modal-body" *ngFor="let hotel of hotels">
+  <div class="modal-body">
     <!--Start form area  -->
     <div class="container py-5">
         <div class="row d-flex justify-content-center align-items-center" >
@@ -12,7 +12,7 @@
             <div class="card my-4 shadow-3">
               <div class="row g-0">
                 <div class="col-xl-6 d-xl-block bg-image">
-                  <img src="{{ hotel.imageUrl }}" alt="{{ hotel.hotelTitle }}"
+                  <img src="{{ hotel?.imageUrl }}" alt="{{ hotel?.hotelTitle }}"
                     class="img-fluid" />
                   <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
                     <div class=" justify-content-center align-items-center h-100">
@@ -62,7 +62,7 @@
                       <label class="form-label" for="zip">Zip</label>
                     </div> -->
                     <div class="form-outline mb-4">
-                        <input type="text" id="propertyId" class="form-control form-control-lg" value="{{ hotel.hotelTitle }}" readonly/>
+                        <input type="text" id="propertyId" class="form-control form-control-lg" value="{{ hotel?.hotelTitle }}" readonly/>
                         <label class="form-label" for="propertyId">Property</label>
                       </div>
                         <div class="form-outline mb-4">
@@ -103,6 +103,6 @@
 
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (onclick)="onClose()">Close</button>
     <button type="submit" class="btn btn-success">Book Your Room</button>
   </div>
