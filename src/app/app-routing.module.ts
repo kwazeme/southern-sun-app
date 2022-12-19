@@ -12,10 +12,9 @@ const routes: Routes = [
   // {path: 'booking/:id', component: HotelBookingComponent, outlet: 'hotelBookingModal'},
   {path: 'hotels', component: HotelsComponent,
   children: [
+    {path: 'booking/:id', component: HotelBookingComponent},
     {path: 'new', component: HotelEditComponent},
     {path: 'edit/:id', component: HotelDetailComponent},
-    {path: 'booking/:id', component: HotelBookingComponent, outlet: 'hotelBookingModal'},
-
   ]}, //hotel children routes
 
   {path: 'resorts', component: ResortsComponent,
@@ -26,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: false})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

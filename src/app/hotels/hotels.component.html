@@ -37,25 +37,28 @@
       <div class="card-footer text-white bg-dark"
       data-bs-toggle="modal"
       data-bs-target="#hotelBookingModal"
-      style="text-align: center; cursor: pointer;"
-      [routerLink]="[{ outlets: { hotelBookingModal: 'booking/{{ hotel.id }}'}}]">
+      style="text-align: center; cursor: pointer;" routerLink="booking/{{ hotel.id }}">
         BOOK NOW
       </div>
     </div>
   </div>
-  <div class="modal fade" id="hoteldetailModal" tabindex="-1" aria-labelledby="hoteldetailLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" data-bs-backdrop="static" id="hotelBookingModal" tabindex="-1" aria-labelledby="hotelBookingModal" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-100p">
-      <div class="modal-content">
-        <router-outlet name="hotelBookingModal"></router-outlet>
-      </div>
+
+</div>
+</div>
+<!-- [routerLink]="[{ outlets: { hotelBookingModal: 'booking/{{ hotel.id }}'}}]" -->
+<div class="modal fade" data-bs-backdrop="static" tabindex="-1" id="hotelBookingModal" aria-labelledby="hotelBookingModal" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-100p">
+    <div class="modal-content">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
+
+
+<div class="modal fade" id="hoteldetailModal" tabindex="-10" aria-labelledby="hoteldetailLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
